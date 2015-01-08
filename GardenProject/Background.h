@@ -11,7 +11,7 @@
 #define GROUNDSTEP		4
 #define WALLSTEP		32
 #define HEIGHT_RATIO	2.0f
-#define TEXTURE_NUM		2
+#define TEXTURE_NUM		3
 
 
 
@@ -30,3 +30,5 @@ void drawBackground();
 
 
 extern void* height_graph;
+extern void* snow_height;
+extern GLuint texture[TEXTURE_NUM];

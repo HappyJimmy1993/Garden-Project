@@ -4,6 +4,7 @@ using namespace std;
 
 
 void* height_graph = malloc(MAPSIZE * MAPSIZE);
+
 GLuint texture[TEXTURE_NUM];
 
 void load_height_graph()
@@ -163,6 +164,20 @@ void load_graphs()
 			free(TextureImage[1]->data);
 		}
 		free(TextureImage[1]);
+	}
+
+	if (TextureImage[2] = LoadBMP("Data/snow.bmp")) {
+		glGenTextures(1, &texture[2]);
+		glBindTexture(GL_TEXTURE_2D, texture[2]);
+		glTexImage2D(GL_TEXTURE_2D, 0, 3, TextureImage[2]->sizeX, TextureImage[2]->sizeY, 0, GL_RGBA, GL_UNSIGNED_BYTE, TextureImage[2]->data);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	}
+	if (TextureImage[2]) {
+		if (TextureImage[2]->data) {
+			free(TextureImage[2]->data);
+		}
+		free(TextureImage[2]);
 	}
 
 }

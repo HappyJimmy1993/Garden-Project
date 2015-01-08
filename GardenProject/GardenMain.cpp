@@ -15,6 +15,7 @@
 #include "Flower.h"
 #include "Background.h"
 #include "Tree.h"
+#include "Snow.h"
 using namespace std;
 const int n = 20;
 const GLfloat R = 0.5f;
@@ -54,11 +55,11 @@ void myDisplay(void)
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	GLfloat blank[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, blank);
-
+	
 	//Tree tem;
 	//tem.setPosition(10, 10);
 	//tem.draw();
-
+	drawBackground();
 	int flowersize = flower_display_list.size();
 	for (int i = 0; i < flowersize; ++i)
 		flower_display_list[i]->draw();
@@ -67,21 +68,32 @@ void myDisplay(void)
 	for (int i = 0; i < treesize; ++i)
 		tree_display_list[i]->draw();
 
+	int snowsize = SnowList.size();
+	for (int i = 0; i < snowsize; ++i)
+		SnowList[i]->draw();
 
-	drawBackground();
+	updatesnow();
+	creatsnow(20);
+
+	
 	// << "Change!" << endl;
 	glFlush();
 	glutSwapBuffers();
 }
 
+void myTimer(int value)
+{
 
+}
 
 int main(int argc, char *argv[]) {
+	srand((unsigned)time(0));
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(800, 600);
 	int main_window = glutCreateWindow("MyGarden");
+	//load_all();
 	glutDisplayFunc(&myDisplay);
 	glutReshapeFunc(&myReshape);
 
@@ -95,9 +107,9 @@ int main(int argc, char *argv[]) {
 
 	/* We register the idle callback with GLUI, *not* with GLUT */
 	//GLUI_Master.set_glutIdleFunc(myDisplay);
+	//cout << "\102";
 
-
-
+	glutTimerFunc(1000, &myTimer, 0);
 	glutIdleFunc(&myDisplay);
 	Allinit();
 	glutMainLoop();

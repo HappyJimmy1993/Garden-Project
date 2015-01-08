@@ -40,7 +40,7 @@ void getKeyboardPress(unsigned char key, int x, int y)
 			int temx, temy, temz;
 			get_Groung_position(mouse_x, mouse_y, temx, temy, temz);
 			tem->setPosition(temx, temz);
-			tem->setAlpha(0.0f);
+			tem->setAlpha(0.35f);
 			flower_display_list.push_back(tem);
 			CreatFlower = true;
 		}

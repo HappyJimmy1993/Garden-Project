@@ -86,6 +86,8 @@
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Save.cpp" />
+    <ClCompile Include="Snow.cpp" />
+    <ClCompile Include="Snowground.cpp" />
     <ClCompile Include="Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +97,8 @@
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="Save.h" />
+    <ClInclude Include="Snow.h" />
+    <ClInclude Include="Snowground.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

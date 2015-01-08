@@ -55,6 +55,8 @@ Flower::Flower()
 void Flower::draw()
 {
 	GLfloat baseheight = get_ground_height(x, z) - 1;
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_NORMALIZE);
 	//»¨¸É
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_stem);

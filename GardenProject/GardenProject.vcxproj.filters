@@ -39,6 +39,12 @@
     <ClCompile Include="Save.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Snowground.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mouse.h">
@@ -60,6 +66,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Save.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Snowground.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
