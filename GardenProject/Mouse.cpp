@@ -55,6 +55,7 @@ void getMouseClick(int button, int state, int x, int y)
 				flower_display_list[flower_display_list.size() - 1]->setPosition(temx, temz);
 				flower_display_list[flower_display_list.size() - 1]->setAlpha(1.0f);
 				CreatFlower = false;
+				coutstat();
 			}
 			if (CreatTree == true)
 			{
@@ -62,6 +63,7 @@ void getMouseClick(int button, int state, int x, int y)
 				get_Groung_position(x, y, temx, temy, temz);
 				tree_display_list[tree_display_list.size() - 1]->setPosition(temx, temz);
 				CreatTree = false;
+				coutstat();
 			}
 			break;
 		case GLUT_RIGHT_BUTTON:

@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ChangeView.cpp" />
+    <ClCompile Include="cout.cpp" />
     <ClCompile Include="Flower.cpp" />
     <ClCompile Include="GardenMain.cpp" />
     <ClCompile Include="Background.cpp" />
@@ -92,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChangeView.h" />
+    <ClInclude Include="cout.h" />
     <ClInclude Include="Flower.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="Keyboard.h" />

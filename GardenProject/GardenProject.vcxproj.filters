@@ -45,6 +45,9 @@
     <ClCompile Include="Snowground.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="cout.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mouse.h">
@@ -72,6 +75,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Snowground.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cout.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,7 +21,7 @@ void getKeyboardPress(unsigned char key, int x, int y)
 		walk_down();
 		break;
 	case 'a':
-		cout << "a";
+		//cout << "a";
 		walk_left();
 		break;
 	case 'd':
@@ -44,6 +44,7 @@ void getKeyboardPress(unsigned char key, int x, int y)
 			flower_display_list.push_back(tem);
 			CreatFlower = true;
 		}
+		coutstat();
 		break;
 	case 't':
 		if ((CreatFlower == false) && (CreatTree == false))
@@ -55,6 +56,7 @@ void getKeyboardPress(unsigned char key, int x, int y)
 			tree_display_list.push_back(tem);
 			CreatTree = true;
 		}
+		coutstat();
 		break;
 	case 'z':
 		save_all();
@@ -67,12 +69,14 @@ void getKeyboardPress(unsigned char key, int x, int y)
 		{
 			flower_display_list[flower_display_list.size() - 1]->change_petal_R(0.1f);
 		}
+		coutstat();
 		break;
 	case 'g':
 		if (CreatFlower == true)
 		{
 			flower_display_list[flower_display_list.size() - 1]->change_petal_G(0.1f);
 		}
+		coutstat();
 		break;
 
 	case 'b':
@@ -80,6 +84,7 @@ void getKeyboardPress(unsigned char key, int x, int y)
 		{
 			flower_display_list[flower_display_list.size() - 1]->change_petal_B(0.1f);
 		}
+		coutstat();
 		break;
 
 	case 'n':
@@ -91,6 +96,7 @@ void getKeyboardPress(unsigned char key, int x, int y)
 		{
 			tree_display_list[tree_display_list.size() - 1]->change_tree_level(1);
 		}
+		coutstat();
 		break;
 
 	case 'm':
@@ -102,9 +108,38 @@ void getKeyboardPress(unsigned char key, int x, int y)
 		{
 			tree_display_list[tree_display_list.size() - 1]->change_tree_level(-1);
 		}
+		coutstat();
 		break;
 
+	case 'p':
+		is_snow = 1 - is_snow;
+		snowcount = 0;
+		coutstat();
+		break;
+
+	case 'o':
+		if (have_wind) stop_wind();
+		else start_wind();
+		coutstat();
+		break;
+
+	case 'i':
+		snow_down();
+		break;
+
+	case 'j':
+		change_snow_level(-5);
+		coutstat();
+		break;
+
+	case 'k':
+		change_snow_level(5);
+		coutstat();
+		break;
 	}
+
+	
+
 }
 
 void getSpecialKeyPress(int key, int x, int y)

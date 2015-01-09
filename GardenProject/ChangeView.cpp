@@ -1,6 +1,6 @@
 #include "ChangeView.h"
 
-ViewStatus viewstat = { 0.0f, 0.0f, 0.03f, 128.0f, 10.0f, 128.0f, 0.0f, 0.0f, -1.0f, 0.5f };
+ViewStatus viewstat = { 0.0f, 0.0f, 0.03f, 64.0f, 10.0f, 64.0f, 0.0f, 0.0f, -1.0f, 0.5f };
 
 void ViewFresh()
 {

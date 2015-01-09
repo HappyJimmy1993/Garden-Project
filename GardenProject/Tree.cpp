@@ -6,10 +6,10 @@ Tree::Tree()
 	// initialise geometry parameters
 	nSlices = 24;
 	nStacks = 1;
-	nLevels = 7;
+	nLevels = 5;
 	trunkRadius = 0.4;
-	trunkHeight = 15;
-	treeRadius = 4.5*trunkRadius;
+	trunkHeight = 18;
+	treeRadius = 4;
 	// initialise material parameters
 	mat_trunk[0] = 0.5f;
 	mat_trunk[1] = 0.3f;

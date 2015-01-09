@@ -40,11 +40,13 @@ void change_ground_height(int x, int y, int value)
 
 void draw_ground()
 {
+
+
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glBegin(GL_QUADS);
-	for (int i = 0; i < MAPSIZE; ++i)
-		for (int j = 0; j < MAPSIZE; ++j)
+	for (int i = 0; i < MAPSIZE; i += GROUNDSTEP)
+		for (int j = 0; j < MAPSIZE; j += GROUNDSTEP)
 		{
 			int temx = i;
 			int temz = j;

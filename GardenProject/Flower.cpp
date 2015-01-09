@@ -82,6 +82,7 @@ void Flower::draw()
 	{
 		glPushMatrix();
 		h = -1.0 + 0.5*k / petalNum;
+		//h = -0.8;
 		phi = phi + 3.6 / sqrt((double)petalNum)*(1.0 / sqrt((double)1 - pow(h, 2.0)));
 		phi = fmod((double)phi, (double)(2 * Pi));
 		glTranslated(x, stemHeight + baseheight, z);
@@ -97,5 +98,6 @@ void Flower::draw()
 
 	GLfloat blank[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, blank);
+	glDisable(GL_BLEND);
 	glDisable(GL_NORMALIZE);
 }

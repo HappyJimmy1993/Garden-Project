@@ -28,6 +28,11 @@ void Allinit()
 	initKeyboard();
 //	initFlower();
 	initBackground();
+	init_snow_graph();
+	is_snow = true;
+	have_wind = false;
+	snowlevel = 20;
+	coutstat();
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
 	GLfloat AmbientLight[4] = { 1, 1, 1, 1 };
@@ -60,6 +65,7 @@ void myDisplay(void)
 	//tem.setPosition(10, 10);
 	//tem.draw();
 	drawBackground();
+	draw_snow_ground();
 	int flowersize = flower_display_list.size();
 	for (int i = 0; i < flowersize; ++i)
 		flower_display_list[i]->draw();
@@ -73,7 +79,6 @@ void myDisplay(void)
 		SnowList[i]->draw();
 
 	updatesnow();
-	creatsnow(20);
 
 	
 	// << "Change!" << endl;
@@ -90,7 +95,7 @@ int main(int argc, char *argv[]) {
 	srand((unsigned)time(0));
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
-	glutInitWindowPosition(100, 100);
+	glutInitWindowPosition(400, 400);
 	glutInitWindowSize(800, 600);
 	int main_window = glutCreateWindow("MyGarden");
 	//load_all();
